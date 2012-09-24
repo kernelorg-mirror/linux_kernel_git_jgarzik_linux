@@ -18,7 +18,7 @@
 /*
  * Number of allowed retries
  */
-#define SD_MAX_RETRIES		5
+#define SD_MAX_RETRIES		sd_max_retries
 #define SD_PASSTHROUGH_RETRIES	1
 #define SD_MAX_MEDIUM_TIMEOUTS	2
 

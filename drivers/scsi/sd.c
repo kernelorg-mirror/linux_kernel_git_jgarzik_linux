@@ -92,6 +92,10 @@ MODULE_ALIAS_SCSI_DEVICE(TYPE_DISK);
 MODULE_ALIAS_SCSI_DEVICE(TYPE_MOD);
 MODULE_ALIAS_SCSI_DEVICE(TYPE_RBC);
 
+static int sd_max_retries = 5;
+module_param_named(max_retries, sd_max_retries, int, 0644);
+MODULE_PARM_DESC(max_retries, "Maximum number of retries, before failing command (default 5)");
+
 #if !defined(CONFIG_DEBUG_BLOCK_EXT_DEVT)
 #define SD_MINORS	16
 #else
